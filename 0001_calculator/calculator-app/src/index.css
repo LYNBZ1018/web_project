@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.calculator {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(6rem, auto) repeat(5, 4rem);
+  gap: 2px;
+  background-color: #EBF6F9;
+  width: calc(24rem + 6px + 2px);
+  margin: 0 auto;
+  border: 2px solid black;
+}
+
+.output {
+  box-sizing: border-box;
+  grid-column: 1 / span 4;  /*独占一行*/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;  /* 数字太长切断 */
+  word-break: break-all;
+}
+
+.last-output {
+
+}
+
+.current-output {
+  font-size: 3rem;
+}
+
+.button-ac {
+  grid-column: 1 / span 2;
+}
+
+.button-equal {
+  grid-column: 3 / span 2;
+}
+
+.calculator>button {
+  background-color: rgba(255,255,255, 0.2);
+}
+
+.calculator>button:hover {
+  background-color: #F9FDFD;
+}
